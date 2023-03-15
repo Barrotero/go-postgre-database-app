@@ -41,15 +41,19 @@ func deleteHandler(c *fiber.Ctx, db *sql.DB) error {
 	return c.SendString("Hello")
 }
 
+func newFunction() *fiber.App {
+	app := fiber.New()
+	return app
+}
+
 func main() {
-	connStr := "postgresql://<username>:<password>@<database_ip>/todos?sslmode=disable"
-	// Connect to database
+	connStr := "user=postgres password=Serv6777* dbname=todos sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	engine := html.New("./views", ".html")
+	engine := html.New(".\views", ".html")
 	app := fiber.New(fiber.Config{
 		Views: engine,
 	})
@@ -78,11 +82,6 @@ func main() {
 	}
 	log.Fatalln(app.Listen(fmt.Sprintf(":%v", port)))
 
-	app.Static("/", "./public") // add this before starting the app
+	app.Static("/", "./public")
 	log.Fatalln(app.Listen(fmt.Sprintf(":%v", port)))
-}
-
-func newFunction() *fiber.App {
-	app := fiber.New()
-	return app
 }
