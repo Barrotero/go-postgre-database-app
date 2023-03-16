@@ -11,7 +11,7 @@ function removeFromDb(item){
     let newitem = input.value
     fetch(`/update?olditem=${item}&newitem=${newitem}`, {method: "PUT"}).then(res =>{
         if (res.status == 200){
-        alert("Database updated")
+        alert("Banco de dados atualizado")
             window.location.pathname = "/"
         }
     })
