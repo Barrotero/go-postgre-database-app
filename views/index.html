@@ -11,7 +11,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css"/>
 
 
-   <title>Document</title>
+   <title>Aplicação</title>
 </head>
 <body>
    <div class="container m-5 p-2 rounded mx-auto bg-light shadow">
@@ -20,7 +20,7 @@
            <div class="col">
                <div class="p-1 h1 text-primary text-center mx-auto display-inline-block">
                    <i class="fa fa-check bg-primary text-white rounded p-2"></i>
-                   <u>Todo List</u>
+                   <u>Lista de Afazeres</u>
                </div>
            </div>
        </div>
@@ -29,10 +29,10 @@
            <div class="col col-11 mx-auto">
                <form action="/" method="POST" class="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
                    <div class="col">
-                       <input name="Item" class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text" placeholder="Add new ..">
+                       <input name="Item" class="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text" placeholder="Inserir Tarefa">
                    </div>
                    <div class="col-auto px-0 mx-0 mr-2">
-                       <button type="submit" class="btn btn-primary">Add</button>
+                       <button type="submit" class="btn btn-primary">Adicionar</button>
                    </div>
                </form>
            </div>
@@ -53,10 +53,10 @@
                    <div class="col-auto m-1 p-0 todo-actions">
                        <div class="row d-flex align-items-center justify-content-end">
                            <h5 class="m-0 p-0 px-2">
-                               <i onclick="updateDb('{{.}}')" class="fa fa-pencil text-warning btn m-0 p-0" data-toggle="tooltip" data-placement="bottom" title="Edit todo"></i>
+                               <i onclick="updateDb('{{.}}')" class="fa fa-pencil text-warning btn m-0 p-0" data-toggle="tooltip" data-placement="bottom" title="Editar Tarefa"></i>
                            </h5>
                            <h5 class="m-0 p-0 px-2">
-                               <i onclick="removeFromDb('{{.}}')" class="fa fa-trash-o text-danger btn m-0 p-0" data-toggle="tooltip" data-placement="bottom" title="Delete todo"></i>
+                               <i onclick="removeFromDb('{{.}}')" class="fa fa-trash-o text-danger btn m-0 p-0" data-toggle="tooltip" data-placement="bottom" title="Deletar Tarefa"></i>
                            </h5>
                        </div>
                    </div>
